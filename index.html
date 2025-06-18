@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doğum Günün Kutlu Olsun Melek</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      line-height: 1.6;
+      overflow-x: hidden;
+      position: relative;
+      height: 100%;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: black;
+      z-index: -2;
+    }
+
+    #bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    header {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      z-index: 1;
+    }
+
+    header h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 4.5rem;
+      font-weight: 700;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+      animation: fadeInDown 2s ease-out;
+    }
+
+    header p {
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin-top: 10px;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+      animation: fadeInUp 2.5s ease-out;
+    }
+
+    @keyframes fadeInDown {
+      0% { opacity: 0; transform: translateY(-40px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(40px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: auto;
+      color: #fff;
+    }
+
+    .quote {
+      font-style: italic;
+      font-size: 1.3rem;
+      text-align: center;
+      margin: 40px 0;
+      font-weight: 600;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .gallery figure {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+      transition: transform 0.3s ease;
+      display: block;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .gallery figcaption {
+      position: absolute;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      width: 100%;
+      text-align: center;
+      padding: 10px;
+      font-size: 1rem;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .gallery figure:hover figcaption {
+      opacity: 1;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      background-color: rgba(255,255,255,0.1);
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+
+    #confetti {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1000;
+    }
+  </style>
+</head>
+<body>
+
+  <video id="bg-video" autoplay muted loop>
+    <source src="video.mp4" type="video/mp4">
+    Tarayıcınız video etiketini desteklemiyor.
+  </video>
+
+  <!-- Arka planda çalan müzik -->
+  <audio id="birthday-audio" autoplay loop>
+    <source src="audio.mp3" type="audio/mp3">
+    Tarayıcınız bu ses öğesini desteklemiyor.
+  </audio>
+
+  <canvas id="confetti"></canvas>
+
+  <header>
+    <h1>Melek</h1>
+    <p>İyiki senle tanıştım iyiki doğdun Melek nice güzel yaşlara</p>
+  </header>
+
+  <section>
+    <h2>İyi ki doğdun koyu fenerlim</h2>
+    <p>Bugün senin günün. Ve senin gibi biri iyi ki doğmuş <3</p>
+
+    <div class="quote">
+      "Gökyüzü mavisiz Melek de Fenersiz olamaz"
+    </div>
+
+    <h3>Senin İçin Birkaç Anı</h3>
+    <div class="gallery">
+      <figure>
+        <img src="1.png" alt="Neymar Gül">
+        <figcaption>Neymar Gül</figcaption>
+      </figure>
+      <figure>
+        <img src="2.png" alt="Fenerli Neymar">
+        <figcaption>Fenerli Neymar</figcaption>
+      </figure>
+      <figure>
+        <img src="3.png" alt="Yanlış Anlaşılan Neymar">
+        <figcaption>Yanlış Anlaşılan Neymar</figcaption>
+      </figure>
+      <figure>
+        <img src="4.png" alt="Mert Hakan Yandaş">
+        <figcaption>Mert Hakan Yandaş</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Melek'in Günü | 17. yaşın kutlu olsun hayırlı nice yaslar görürsün umarım.
+  </footer>
+
+  <script>
+    const canvas = document.getElementById('confetti');
+    const ctx = canvas.getContext('2d');
+    let W = window.innerWidth;
+    let H = window.innerHeight;
+    canvas.width = W;
+    canvas.height = H;
+
+    let particles = [];
+    const maxParticles = 250;
+
+    for (let i = 0; i < maxParticles; i++) {
+      particles.push({
+        x: Math.random() * W,
+        y: Math.random() * H,
+        r: Math.random() * 6 + 2,
+        d: Math.random() * maxParticles,
+        color: `hsl(${Math.random() * 360}, 100%, 70%)`,
+        tilt: Math.floor(Math.random() * 10) - 10,
+        tiltAngleIncremental: (Math.random() * 0.07) + 0.05,
+        tiltAngle: 0
+      });
+    }
+
+    function draw() {
+      ctx.clearRect(0, 0, W, H);
+      particles.forEach((p, index) => {
+        ctx.beginPath();
+        ctx.lineWidth = p.r;
+        ctx.strokeStyle = p.color;
+        ctx.moveTo(p.x + p.tilt + p.r / 2, p.y);
+        ctx.lineTo(p.x + p.tilt, p.y + p.tilt + p.r / 2);
+        ctx.stroke();
+      });
+      update();
+    }
+
+    function update() {
+      particles.forEach((p, i) => {
+        p.tiltAngle += p.tiltAngleIncremental;
+        p.y += (Math.cos(p.d) + 3 + p.r / 2) / 2;
+        p.x += Math.sin(p.d);
+        p.tilt = Math.sin(p.tiltAngle - i / 3) * 15;
+
+        if (p.y > H) {
+          p.x = Math.random() * W;
+          p.y = -20;
+        }
+      });
+    }
+
+    let animationId;
+    (function loop() {
+      animationId = requestAnimationFrame(loop);
+      draw();
+    })();
+
+    setTimeout(() => {
+      cancelAnimationFrame(animationId);
+      ctx.clearRect(0, 0, W, H);
+    }, 5000);
+
+    window.addEventListener("resize", () => {
+      W = window.innerWidth;
+      H = window.innerHeight;
+      canvas.width = W;
+      canvas.height = H;
+    });
+  </script>
+
+</body>
+</html>
